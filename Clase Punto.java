@@ -1,24 +1,17 @@
-public class Punto {
-    private float x;
-    private float y;
+class Punto {
+    private int x;
+    private int y;
 
-    public Punto(float x, float y) {
+    public Punto(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public float[] coordCartesianas() {
-        return new float[]{x, y};
+    public int getX() {
+        return x;
     }
 
-    public float[] coordPolares() {
-        float r = (float) Math.sqrt(x * x + y * y);
-        float theta = (float) Math.atan2(y, x);
-        return new float[]{r, theta};
-    }
-
-    @Override
-    public String toString() {
-        return "Punto(" + x + ", " + y + ")";
+    public int getY() {
+        return y;
     }
 }
